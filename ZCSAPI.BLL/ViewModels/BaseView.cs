@@ -8,6 +8,8 @@ namespace ZCSAPI.BLL.ViewModels
 {
     public class BaseView
     {
-        public string ID { get; set; }//主键
+        public string ID { get; set; }//主键\
+
+        //public string name { get; set; }
     }
 }
