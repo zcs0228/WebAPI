@@ -1,0 +1,5 @@
+http://localhost:8088/api/values/get
+
+User-Agent: Fiddler
+Host: localhost:8088
+Authorization: Basic zcs:1234

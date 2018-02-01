@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "上传图片";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>上传图片</h2>
+<form data-ajax-success="AfterUpload" enctype="multipart/form-data" id="frm">
+    <input type="text" name="productCode" id="txtCode"/>
+    <input type="text" name="productName" id="txtName"/>
+    <input type="text" name="productDescribe" id="txtDescribe"/>
+    <input type="file" name="fileBase" value=" " id="imgUpload" />
+    <input type="submit" id="btnSub" value="上传图片" /> <span>上传图片宽度最大尺寸720px，高度无限制</span>
+</form>
+
+@section Scripts{
+    <script>
+            $("#btnSub").click(function () {
+                $("#frm").ajaxSubmit({
+                    url: "/home/UploadFilesPost",
+                    type: "Post",
+                    success: AfterUpload
+                });
+                return false;
+            });
+
+            function AfterUpload(msg) {
+                if (msg != "0") {
+                    $("#imgPath").removeAttr("src").attr("src", msg);
+                } else {
+                    swal({
+                        title: "温馨提示",
+                        text: "图片格式有误"
+                    });
+                    $("#imgPath").val("");
+                    return false;
+                }
+            }
+    </script>
+}
+

@@ -1,0 +1,18 @@
+记录时间：2018-02-01 10:56:37,909 
+线程ID:[11] 
+日志级别：  ERROR 
+出错类：ZCSAPI.Log4Net.LogHelper property: [(null)] 
+错误描述：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ZCSAPI.App_Start.BasicAuthorizeAttribute.LoginNameLogin(HttpActionContext actionContext, String userInfo) 位置 E:\zcsgit\ZCSAPI\ZCSAPI\App_Start\BasicAuthorizeAttribute.cs:行号 98
+   在 ZCSAPI.App_Start.BasicAuthorizeAttribute.OnAuthorization(HttpActionContext actionContext) 位置 E:\zcsgit\ZCSAPI\ZCSAPI\App_Start\BasicAuthorizeAttribute.cs:行号 58
+   在 System.Web.Http.Filters.AuthorizationFilterAttribute.OnAuthorizationAsync(HttpActionContext actionContext, CancellationToken cancellationToken)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext() 
+
+
